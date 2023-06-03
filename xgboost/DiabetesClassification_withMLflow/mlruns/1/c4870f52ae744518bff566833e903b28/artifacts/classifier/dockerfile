@@ -8,7 +8,7 @@ RUN pip3 install -r requirements.txt
 
 # Copy the trained XGBoost model into the container
 COPY model.xgb .
-COPY predict.py .
+COPY python.py .
 
 # Specify the command to run when the container starts
-CMD ["python", "-u" "predict.py"]
+CMD ["python", "-u" "python.py"]
